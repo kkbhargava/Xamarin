@@ -10,6 +10,7 @@ namespace HelloWorld
         {
             InitializeComponent();
 
+            // The page to open first when the app launches
             MainPage = new MainPage();
         }
 
