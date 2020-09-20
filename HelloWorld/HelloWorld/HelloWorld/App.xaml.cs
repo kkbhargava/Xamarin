@@ -11,6 +11,7 @@ namespace HelloWorld
             InitializeComponent();
 
             // The page to open first when the app launches
+            // Code was added in VS
             MainPage = new MainPage();
         }
 
