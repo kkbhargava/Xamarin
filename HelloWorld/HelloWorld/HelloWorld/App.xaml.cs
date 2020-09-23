@@ -12,7 +12,7 @@ namespace HelloWorld
 
             // The page to open first when the app launches
             // Code was added in VS
-            MainPage = new MainPage();
+            MainPage = new SearchBarPage();
         }
 
         protected override void OnStart()
