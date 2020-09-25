@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+            xmlns:sys="clr-namespace:System;assembly=mscorlib"
+            Padding="40" xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="HelloWorld.AllControlsPage">
+    <StackLayout>
+        <Switch HorizontalOptions="Start" IsToggled="True" x:Name="Switch"/>
+        <Label Text="Sample" HorizontalOptions="Start"
+               IsVisible="{Binding Source={x:Reference Switch}, Path=IsToggled}"/>
+
+        <Slider x:Name="Slider" Maximum="255" Minimum="10" Value="50" ValueChanged="Slider_ValueChanged"/>
+        <Label Text="{Binding Source={x:Reference Slider}, Path=Value, StringFormat='{0:N0}'}"/>
+
+        <Stepper x:Name="Stepper" Increment="5" Maximum="50" Minimum="0"/>
+        <Label Text="{Binding Source={x:Reference Stepper}, Path=Value}"/>
+
+        <Entry Keyboard="Numeric" Placeholder="Phone"/>
+        <Entry IsPassword="True" Completed="Entry_Completed"/>
+        <Label x:Name="Label"/>
+
+        <Picker x:Name="ContactMethods" SelectedIndexChanged="ContactMethods_SelectedIndexChanged" Title="Contact Method" BackgroundColor="Yellow">
+            <Picker.Items>
+                <x:String>SMS</x:String>
+                <x:String>Email</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MMM yyyy" MinimumDate="1 Jan 2016" MaximumDate="30 Jan 2022" DateSelected="DatePicker_DateSelected" />
+        <TimePicker Time="13:00"/>
+    </StackLayout>
+</ContentPage>

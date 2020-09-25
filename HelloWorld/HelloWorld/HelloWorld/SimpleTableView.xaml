@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.SimpleTableView">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Basics">
+                <TextCell Text="Name" Detail="Kamal Kant"/>
+                <EntryCell Label="Title" Placeholder="(eg Shopping)"/>
+                <SwitchCell Text="Notifications" On="True"/>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 0">
+                        <Label Text="Starts" VerticalOptions="Center"/>
+                        <DatePicker Date="1 June 2020" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
